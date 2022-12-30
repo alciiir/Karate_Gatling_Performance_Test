@@ -8,6 +8,6 @@ import scala.language.postfixOps
 class TestPerfAPI extends Simulation {
   val testAPI = scenario("get").exec(karateFeature("classpath:API_Cucumber/get.feature"))
   setUp(
-    testAPI.inject(rampUsers(500) during (15 seconds))
+    testAPI.inject(rampUsers(250) during (15 seconds))
   )
 }

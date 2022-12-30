@@ -8,6 +8,6 @@ import scala.language.postfixOps
 class TestPerf extends Simulation{
   val testUI = scenario("IngresoWeb").exec(karateFeature("classpath:UI/IngresoWeb2.feature"))
   setUp(
-    testUI.inject(rampUsers(1000) during (30 seconds))
+    testUI.inject(rampUsers(250) during (10 seconds))
   )
 }
